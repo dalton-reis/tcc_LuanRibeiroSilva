@@ -1,0 +1,27 @@
+# =============== #
+# Unity generated #
+# =============== #
+ProjetoAprendendoLibras/Temp
+ProjetoAprendendoLibras/Library
+ProjetoAprendendoLibras/QCAR
+ProjetoAprendendoLibras/obj
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+*.vscode
+
+# ======= #
+# Android #
+# ======= #
+*.apk
