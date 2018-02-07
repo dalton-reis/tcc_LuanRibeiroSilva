@@ -1,0 +1,149 @@
+fileFormatVersion: 2
+guid: 24a740c8fc6113a438cfe86afc69b137
+timeCreated: 1517962876
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Arm
+    100002: Armature
+    100004: Fist
+    100006: //RootNode
+    100008: IndexFinger
+    100010: IndexFinger1
+    100012: IndexFinger2
+    100014: IndexFinger3
+    100016: IndexFinger3_end
+    100018: MiddleFinger
+    100020: MiddleFinger1
+    100022: MiddleFinger2
+    100024: MiddleFinger3
+    100026: MiddleFinger3_end
+    100028: Pinky
+    100030: Pinky1
+    100032: Pinky2
+    100034: Pinky3
+    100036: Pinky3_end
+    100038: RingFinger
+    100040: RingFinger1
+    100042: RingFinger2
+    100044: RingFinger3
+    100046: RingFinger3_end
+    100048: Thumb
+    100050: Thumb1
+    100052: Thumb2
+    100054: Thumb2_end
+    100056: ZBrushPolyMesh3D
+    400000: Arm
+    400002: Armature
+    400004: Fist
+    400006: //RootNode
+    400008: IndexFinger
+    400010: IndexFinger1
+    400012: IndexFinger2
+    400014: IndexFinger3
+    400016: IndexFinger3_end
+    400018: MiddleFinger
+    400020: MiddleFinger1
+    400022: MiddleFinger2
+    400024: MiddleFinger3
+    400026: MiddleFinger3_end
+    400028: Pinky
+    400030: Pinky1
+    400032: Pinky2
+    400034: Pinky3
+    400036: Pinky3_end
+    400038: RingFinger
+    400040: RingFinger1
+    400042: RingFinger2
+    400044: RingFinger3
+    400046: RingFinger3_end
+    400048: Thumb
+    400050: Thumb1
+    400052: Thumb2
+    400054: Thumb2_end
+    400056: ZBrushPolyMesh3D
+    2100000: defaultMat
+    4300000: ZBrushPolyMesh3D
+    9500000: //RootNode
+    13700000: ZBrushPolyMesh3D
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
