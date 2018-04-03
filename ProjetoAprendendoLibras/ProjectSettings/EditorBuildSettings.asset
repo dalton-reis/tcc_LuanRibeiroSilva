@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyProject/Scenes/MainMenu.unity
     guid: b77c84f5cd2118d489878a7aa410d570
+  - enabled: 1
+    path: Assets/MyProject/Scenes/GameAR.unity
+    guid: 079fc0140e189ee4ca0d6e0ffcce33a9
