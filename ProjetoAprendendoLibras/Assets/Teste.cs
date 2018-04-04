@@ -5,6 +5,7 @@ using UnityEngine;
 public class Teste : MonoBehaviour
 {
 
+    public string nomeAnimacao;
     private Animator animacao;
 
     void Start()
@@ -16,7 +17,8 @@ public class Teste : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-			animacao.SetTrigger("Next");
+			//animacao.SetTrigger("Next");
+            animacao.Play(nomeAnimacao);
         }
     }
 }
