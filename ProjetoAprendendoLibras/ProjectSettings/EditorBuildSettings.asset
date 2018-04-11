@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/MyProject/Scenes/MainMenu.unity
-    guid: b77c84f5cd2118d489878a7aa410d570
+    path: Assets/MyProject/MainMenu/MainMenuScene.unity
+    guid: 64d6da7b6b07fa84fb68fbea91273873
   - enabled: 1
-    path: Assets/MyProject/Scenes/GameAR.unity
+    path: Assets/MyProject/GameAR/GameAR.unity
     guid: 079fc0140e189ee4ca0d6e0ffcce33a9
+  - enabled: 1
+    path: Assets/MyProject/LearnSignals/LearnSignalsScene.unity
+    guid: 7ded9bb806557374c82ac513fd2bc8f5
+  - enabled: 1
+    path: Assets/SceneTeste.unity
+    guid: b77c84f5cd2118d489878a7aa410d570

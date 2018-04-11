@@ -125,7 +125,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4929111465624274}
   - component: {fileID: 95474432958468402}
-  - component: {fileID: 114677990699723586}
   m_Layer: 0
   m_Name: HandRigged
   m_TagString: Untagged
@@ -900,17 +899,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114677990699723586
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1265631861917744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e49bd2855090fb140bc80c4385131592, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!137 &137759925263099996
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
