@@ -10,6 +10,9 @@ public class LearnSignalsScript : MonoBehaviour
 
     public Text uppercaseLetterText;
     public Text lowerLetterText;
+    public Text numberText;
+    public GameObject signalsObject;
+    public GameObject menuObject;
 
     Transform transformHand;
     Animator animatorHand;
@@ -18,18 +21,14 @@ public class LearnSignalsScript : MonoBehaviour
                         "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
                         "U", "V", "W", "X", "Y", "Z"};
 
-    int positionCurrentSignal = -1;
+    string[] numbers = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
-    float f_lastX = 0.0f;
-    float f_difX = 0.5f;
+    string[] currentSignals;
+
+    int positionCurrentSignal;
 
     void Start()
     {
-        GameObject hand = GameObject.Find("Hand");
-        transformHand = hand.GetComponent<Transform>();
-        animatorHand = GameObject.Find("Hand").GetComponentInChildren<Animator>();
-
-        Invoke("NextSignalButton", 0.5f);
     }
 
     void Update()
@@ -42,13 +41,26 @@ public class LearnSignalsScript : MonoBehaviour
         if (Input.touchCount == 1)
         {
             Touch touch = Input.GetTouch(0);
- 
+
             if (touch.phase == TouchPhase.Moved)
             {
                 transformHand.Rotate(0f, touch.deltaPosition.x * 0.3f, 0f);
             }
- 
+
         }
+    }
+
+    void Init()
+    {
+        menuObject.SetActive(false);
+        signalsObject.SetActive(true);
+
+        GameObject hand = GameObject.Find("Hand");
+        transformHand = hand.GetComponent<Transform>();
+        animatorHand = GameObject.Find("Hand").GetComponentInChildren<Animator>();
+
+        positionCurrentSignal = -1;
+        NextSignalButton();   
     }
 
     public void BackButton()
@@ -56,9 +68,34 @@ public class LearnSignalsScript : MonoBehaviour
         SceneManager.LoadSceneAsync("MainMenuScene");
     }
 
+    public void MenuButton()
+    {
+        animatorHand.Rebind();
+        menuObject.SetActive(true);
+        signalsObject.SetActive(false);
+        numberText.enabled = false;
+        uppercaseLetterText.enabled = false;
+        lowerLetterText.enabled = false;
+    }
+
+    public void LearnNumbersButton()
+    {
+        currentSignals = numbers;
+        numberText.enabled = true;
+        Init();
+    }
+
+    public void LearnLettersButton()
+    {
+        currentSignals = letters;
+        uppercaseLetterText.enabled = true;
+        lowerLetterText.enabled = true;
+        Init();
+    }
+
     public void NextSignalButton()
     {
-        if (positionCurrentSignal != letters.Length - 1)
+        if (positionCurrentSignal != currentSignals.Length - 1)
         {
             transformHand.rotation = Quaternion.Euler(0, -80, 0);
             positionCurrentSignal++;
@@ -78,10 +115,11 @@ public class LearnSignalsScript : MonoBehaviour
 
     void PlayAnimationSignal()
     {
-        string letter = letters[positionCurrentSignal];
-        uppercaseLetterText.text = letter;
-        lowerLetterText.text = letter.ToLower();
-        animatorHand.Play("Letter" + letter);
+        string signal = currentSignals[positionCurrentSignal];
+        uppercaseLetterText.text = signal;
+        lowerLetterText.text = signal.ToLower();
+        numberText.text = signal;
+        animatorHand.Play("Signal" + signal);
     }
 
     public void ReloadSignalButton()
