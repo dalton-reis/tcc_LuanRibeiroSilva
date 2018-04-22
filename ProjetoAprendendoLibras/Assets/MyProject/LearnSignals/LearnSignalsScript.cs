@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Vuforia;
 
 public class LearnSignalsScript : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class LearnSignalsScript : MonoBehaviour
 
     void Start()
     {
+        VuforiaBehaviour.Instance.enabled = false;
     }
 
     void Update()

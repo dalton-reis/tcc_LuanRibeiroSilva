@@ -1,29 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DetectTrigger : MonoBehaviour
 {
     public GameObject text;
+    public Sprite spriteCheck;
 
-    // Use this for initialization
+    GameARScript gameARScript;
+
     void Start()
     {
-
+        gameARScript = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<GameARScript>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (gameObject.name[gameObject.name.Length-1].Equals(other.gameObject.name[other.gameObject.name.Length-1]))
+        char signal = gameObject.name[gameObject.name.Length - 1];
+
+        if (signal.Equals(other.gameObject.name[other.gameObject.name.Length - 1]))
+        {
             text.GetComponent<TextMesh>().color = Color.blue;
+            GameObject.Find("ImageTextResult" + signal).GetComponent<Image>().sprite = spriteCheck;
+
+            gameARScript.CheckFinishGame(signal.ToString());
+        }
         else
+        {
             text.GetComponent<TextMesh>().color = Color.red;
+
+            gameARScript.CheckErrors();
+        }
     }
 
     private void OnTriggerExit(Collider other)

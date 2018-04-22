@@ -6,7 +6,6 @@ using Vuforia;
 public class DetectTrackable : MonoBehaviour, ITrackableEventHandler
 {
 
-    // Use this for initialization
     void Start()
     {
         GetComponent<TrackableBehaviour>().RegisterTrackableEventHandler(this);
@@ -19,12 +18,18 @@ public class DetectTrackable : MonoBehaviour, ITrackableEventHandler
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
-			GameObject.Find("Signal"+gameObject.name[gameObject.name.Length-1])
-				.GetComponent<Animator>().SetTrigger("Letter"+gameObject.name[gameObject.name.Length-1]);
+            char lastLetter = gameObject.name[gameObject.name.Length - 1];
+
+            if (gameObject.name.Contains("Signal"))
+            {
+                GetComponentInChildren<Animator>().Rebind();
+                GetComponentInChildren<Animator>().Play("Signal" + lastLetter);
+            }
+            else
+                GetComponentInChildren<TextMesh>().text = lastLetter.ToString();
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
 

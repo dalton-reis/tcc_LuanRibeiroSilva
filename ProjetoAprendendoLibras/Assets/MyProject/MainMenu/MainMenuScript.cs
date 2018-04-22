@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Vuforia;
 
 public class MainMenuScript : MonoBehaviour
 {
 
     void Start()
     {
-
+        VuforiaBehaviour.Instance.enabled = false;
     }
 
     void Update()
@@ -21,11 +22,24 @@ public class MainMenuScript : MonoBehaviour
 
     public void LoadGameARScene()
     {
-        SceneManager.LoadScene("GameAR");
+        StartCoroutine(LoadScene("GameARScene"));
+        //SceneManager.LoadScene("GameAR");
     }
 
     public void LoadLearnSignalsScene()
     {
-        SceneManager.LoadScene("LearnSignalsScene");
+        StartCoroutine(LoadScene("LearnSignalsScene"));
+        //SceneManager.LoadScene("LearnSignalsScene");
+    }
+
+    IEnumerator LoadScene(string scene)
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
+
+        while (!asyncLoad.isDone)
+        {
+            Debug.Log(asyncLoad.progress);
+            yield return null;
+        }
     }
 }

@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - MarkerSignal
+  - MarkerLetter
+  - TextResult
+  - ImageTextResult
   layers:
   - Default
   - TransparentFX
