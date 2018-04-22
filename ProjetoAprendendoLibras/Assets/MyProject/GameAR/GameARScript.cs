@@ -69,7 +69,10 @@ public class GameARScript : MonoBehaviour
     void Init()
     {
         if (VuforiaRuntime.Instance.HasInitialized)
+        {
             VuforiaBehaviour.Instance.enabled = true;
+            CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
+        }
         else
             StartCoroutine(StartVuforia());
 
@@ -91,7 +94,7 @@ public class GameARScript : MonoBehaviour
     {
         VuforiaBehaviour.Instance.enabled = false;
 
-        for (int i = 0; i < imagesTextResult.Length; i++)
+        for (int i = 0; i < 4; i++)
         {
             imagesTextResult[i].GetComponent<UnityEngine.UI.Image>().sprite = spriteUncheck;
             markersSignals[i].name = markersSignals[i].name.Remove(markersSignals[i].name.Length - 1);
@@ -123,6 +126,7 @@ public class GameARScript : MonoBehaviour
     void CreateMarkers()
     {
         aleatorySignals = new string[] { "", "", "", "" };
+        int[] positionMarkers = { 0, 1, 2, 3 };
 
         for (int i = 0; i < 4; i++)
         {
@@ -135,9 +139,12 @@ public class GameARScript : MonoBehaviour
 
             aleatorySignals[i] = signal;
             markersSignals[i].name += signal;
-            markersLetters[i].name += signal;
             textResults[i].GetComponent<Text>().text = signal;
             imagesTextResult[i].name += signal;
+
+            int position = positionMarkers[Random.Range(0, positionMarkers.Length)];
+            positionMarkers = positionMarkers.ToList().Where(x => x != position).ToArray();
+            markersLetters[position].name += signal;
         }
     }
 
