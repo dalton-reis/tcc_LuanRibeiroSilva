@@ -16,8 +16,13 @@ public class MainMenuScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            BackButton();
         }
+    }
+
+    public void BackButton()
+    {
+        Application.Quit();
     }
 
     public void LoadGameARScene()
