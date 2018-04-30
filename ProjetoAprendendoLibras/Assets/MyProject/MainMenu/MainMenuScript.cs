@@ -32,6 +32,12 @@ public class MainMenuScript : MonoBehaviour
         //SceneManager.LoadScene("LearnSignalsScene");
     }
 
+    public void LoadGameVRScene()
+    {
+        StartCoroutine(LoadScene("GameVRScene"));
+        //SceneManager.LoadScene("GameVRScene");
+    }
+
     IEnumerator LoadScene(string scene)
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(scene);
