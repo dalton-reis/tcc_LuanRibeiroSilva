@@ -92,8 +92,6 @@ public class GameARScript : MonoBehaviour
 
     void RestartGame()
     {
-        VuforiaBehaviour.Instance.enabled = false;
-
         for (int i = 0; i < 4; i++)
         {
             imagesTextResult[i].GetComponent<UnityEngine.UI.Image>().sprite = spriteUncheck;
@@ -109,6 +107,8 @@ public class GameARScript : MonoBehaviour
 
         menuObject.SetActive(true);
         markersObject.SetActive(false);
+
+        VuforiaBehaviour.Instance.enabled = false;
     }
 
     public void GameNumbersButton()
