@@ -17,7 +17,6 @@ public class GameVRScript : MonoBehaviour
     public GameObject progress;
     public GameObject menuObject;
     public GameObject gameVRObject;
-    public Button startButton;
     public Text aleatorySignalText;
     public Text secondText;
     public Text numberErrorsText;

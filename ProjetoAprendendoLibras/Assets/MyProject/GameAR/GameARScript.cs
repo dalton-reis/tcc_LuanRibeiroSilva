@@ -15,6 +15,9 @@ public class GameARScript : MonoBehaviour
     public Text gameOverText;
     public Text errorsText;
     public Sprite spriteUncheck;
+    public Text loadingText;
+    public Button gameNumbersButton;
+    public Button gameLettersButton;
 
     string[] letters = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
                         "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
@@ -40,7 +43,7 @@ public class GameARScript : MonoBehaviour
     IEnumerator StartVuforia()
     {
         VuforiaRuntime.Instance.InitVuforia();
-        while (!VuforiaRuntime.Instance.HasInitialized)
+        while (!VuforiaRuntime.Instance.HasInitialized) 
             yield return null;
 
         VuforiaARController.Instance.RegisterVuforiaStartedCallback(OnVuforiaStarted);
@@ -66,8 +69,13 @@ public class GameARScript : MonoBehaviour
         SceneManager.LoadScene("MainMenuScene");
     }
 
-    void Init()
+    IEnumerator Init()
     {
+        loadingText.gameObject.SetActive(true);
+        gameLettersButton.gameObject.SetActive(false);
+        gameNumbersButton.gameObject.SetActive(false);
+        yield return null;
+
         if (VuforiaRuntime.Instance.HasInitialized)
         {
             VuforiaBehaviour.Instance.enabled = true;
@@ -107,20 +115,23 @@ public class GameARScript : MonoBehaviour
 
         menuObject.SetActive(true);
         markersObject.SetActive(false);
-
+        gameLettersButton.gameObject.SetActive(true);
+        gameNumbersButton.gameObject.SetActive(true);
+        loadingText.gameObject.SetActive(false);
+        
         VuforiaBehaviour.Instance.enabled = false;
     }
 
     public void GameNumbersButton()
     {
         currentSignals = numbers;
-        Init();
+        StartCoroutine("Init");
     }
 
     public void GameLettersButton()
     {
         currentSignals = letters;
-        Init();
+        StartCoroutine("Init");
     }
 
     void CreateMarkers()
