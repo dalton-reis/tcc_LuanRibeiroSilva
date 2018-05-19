@@ -196,12 +196,12 @@ AnimationClip:
       - serializedVersion: 2
         time: 3
         value: {x: 0, y: 0, z: 0}
-        inSlope: {x: 0, y: 0.19999693, z: 0}
-        outSlope: {x: 0, y: 0.19999693, z: 0}
+        inSlope: {x: 0, y: 0.19999695, z: 0}
+        outSlope: {x: 0, y: 0.19999695, z: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 4
-        value: {x: 0, y: 180, z: 0}
+        value: {x: 0, y: 120, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1212,12 +1212,12 @@ AnimationClip:
       - serializedVersion: 2
         time: 3
         value: 0
-        inSlope: 0.19999693
-        outSlope: 0.19999693
+        inSlope: 0.19999695
+        outSlope: 0.19999695
         tangentMode: 136
       - serializedVersion: 2
         time: 4
-        value: 180
+        value: 120
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2152,7 +2152,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Armature/Arm
+    path: Armature/Arm/Fist/IndexFinger/IndexFinger1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2162,7 +2162,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Armature/Arm
+    path: Armature/Arm/Fist/IndexFinger/IndexFinger1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2172,7 +2172,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Armature/Arm
+    path: Armature/Arm/Fist/IndexFinger/IndexFinger1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2452,7 +2452,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Armature/Arm/Fist/IndexFinger/IndexFinger1
+    path: Armature/Arm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2462,7 +2462,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Armature/Arm/Fist/IndexFinger/IndexFinger1
+    path: Armature/Arm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2472,7 +2472,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Armature/Arm/Fist/IndexFinger/IndexFinger1
+    path: Armature/Arm
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 1
