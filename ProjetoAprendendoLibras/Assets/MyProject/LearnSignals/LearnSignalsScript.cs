@@ -14,6 +14,8 @@ public class LearnSignalsScript : MonoBehaviour
     public Text numberText;
     public GameObject signalsObject;
     public GameObject menuObject;
+    public GameObject loadingObject;
+    public UnityEngine.UI.Image correctImage;
 
     Transform transformHand;
     Animator animatorHand;
@@ -26,7 +28,7 @@ public class LearnSignalsScript : MonoBehaviour
 
     string[] currentSignals;
 
-    int positionCurrentSignal;
+    int positionCurrentSignal = -1;
 
     void Start()
     {
@@ -48,7 +50,15 @@ public class LearnSignalsScript : MonoBehaviour
             {
                 transformHand.Rotate(0f, touch.deltaPosition.x * 0.3f, 0f);
             }
+        }
 
+        if (animatorHand != null && animatorHand.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animatorHand.IsInTransition(0))
+        {
+            loadingObject.SetActive(false);
+            correctImage.gameObject.SetActive(true);
+        } else {
+            loadingObject.SetActive(true);
+            correctImage.gameObject.SetActive(false);
         }
     }
 
@@ -62,7 +72,7 @@ public class LearnSignalsScript : MonoBehaviour
         animatorHand = GameObject.Find("Hand").GetComponentInChildren<Animator>();
 
         positionCurrentSignal = -1;
-        NextSignalButton();   
+        NextSignalButton();
     }
 
     public void BackButton()
