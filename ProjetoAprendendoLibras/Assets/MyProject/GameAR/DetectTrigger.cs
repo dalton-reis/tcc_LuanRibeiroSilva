@@ -21,6 +21,11 @@ public class DetectTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (gameObject.tag.Equals(other.tag))
+        {
+            return;
+        }
+
         char signal = gameObject.name[gameObject.name.Length - 1];
 
         if (signal.Equals(other.gameObject.name[other.gameObject.name.Length - 1]))
