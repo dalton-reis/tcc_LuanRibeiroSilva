@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class GameARScript : MonoBehaviour
 {
+    const CameraDevice.FocusMode FocusModeAR = CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO;
 
     public GameObject menuObject;
     public GameObject markersObject;
@@ -43,16 +44,25 @@ public class GameARScript : MonoBehaviour
     IEnumerator StartVuforia()
     {
         VuforiaRuntime.Instance.InitVuforia();
-        while (!VuforiaRuntime.Instance.HasInitialized) 
+        while (!VuforiaRuntime.Instance.HasInitialized)
             yield return null;
 
         VuforiaARController.Instance.RegisterVuforiaStartedCallback(OnVuforiaStarted);
+        VuforiaARController.Instance.RegisterOnPauseCallback(OnPausedVuforia);
         GetComponent<VuforiaBehaviour>().enabled = true;
     }
 
     void OnVuforiaStarted()
     {
-        CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
+        CameraDevice.Instance.SetFocusMode(FocusModeAR);
+    }
+
+    void OnPausedVuforia(bool paused)
+    {
+        if (!paused)
+        {
+            CameraDevice.Instance.SetFocusMode(FocusModeAR);
+        }
     }
 
     void Update()
@@ -79,7 +89,7 @@ public class GameARScript : MonoBehaviour
         if (VuforiaRuntime.Instance.HasInitialized)
         {
             VuforiaBehaviour.Instance.enabled = true;
-            CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
+            CameraDevice.Instance.SetFocusMode(FocusModeAR);
         }
         else
             StartCoroutine(StartVuforia());
@@ -118,7 +128,7 @@ public class GameARScript : MonoBehaviour
         gameLettersButton.gameObject.SetActive(true);
         gameNumbersButton.gameObject.SetActive(true);
         loadingText.gameObject.SetActive(false);
-        
+
         VuforiaBehaviour.Instance.enabled = false;
     }
 
