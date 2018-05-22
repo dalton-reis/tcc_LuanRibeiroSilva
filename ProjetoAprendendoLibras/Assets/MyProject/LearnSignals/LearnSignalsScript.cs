@@ -109,7 +109,6 @@ public class LearnSignalsScript : MonoBehaviour
     {
         if (positionCurrentSignal != currentSignals.Length - 1)
         {
-            transformHand.rotation = Quaternion.Euler(0, -80, 0);
             positionCurrentSignal++;
             PlayAnimationSignal();
         }
@@ -119,7 +118,6 @@ public class LearnSignalsScript : MonoBehaviour
     {
         if (positionCurrentSignal != 0)
         {
-            transformHand.rotation = Quaternion.Euler(0, -80, 0);
             positionCurrentSignal--;
             PlayAnimationSignal();
         }
@@ -127,6 +125,8 @@ public class LearnSignalsScript : MonoBehaviour
 
     void PlayAnimationSignal()
     {
+        transformHand.rotation = Quaternion.Euler(0, -80, 0);
+
         string signal = currentSignals[positionCurrentSignal];
         uppercaseLetterText.text = signal;
         lowerLetterText.text = signal.ToLower();
@@ -136,6 +136,7 @@ public class LearnSignalsScript : MonoBehaviour
 
     public void ReloadSignalButton()
     {
+        transformHand.rotation = Quaternion.Euler(0, -80, 0);
         animatorHand.Play("Initial");
         Invoke("PlayAnimationSignal", 0.1f);
     }
