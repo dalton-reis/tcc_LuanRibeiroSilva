@@ -447,7 +447,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: markerSignal1Material
+  m_Name: markerSignal2Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -460,7 +460,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 28e70ab4a51648df831432cdd677ee9a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3b49dd4fb5ca4506b84c2457e4d01b68, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -554,7 +554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &190056714
 Transform:
   m_ObjectHideFlags: 0
@@ -651,7 +651,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: markerLetter4Material
+  m_Name: markerLetter3Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -664,7 +664,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 2a13bc210f4b4a51afff59b41b87f154, type: 3}
+        m_Texture: {fileID: 2800000, guid: 05cc816e920a46ac94cc17e58565b2b6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -1465,7 +1465,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 0.5, z: 1.1}
+  m_Size: {x: 1.2, y: 0.5, z: 1.2}
   m_Center: {x: 0, y: 0.07, z: 0}
 --- !u!54 &945537866
 Rigidbody:
@@ -2003,7 +2003,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 0.5, z: 1.1}
+  m_Size: {x: 1.2, y: 0.5, z: 1.2}
   m_Center: {x: 0, y: 0.07, z: 0}
 --- !u!54 &1033224296
 Rigidbody:
@@ -2468,7 +2468,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 0.5, z: 1.1}
+  m_Size: {x: 1.2, y: 0.5, z: 1.2}
   m_Center: {x: 0, y: 0.07, z: 0}
 --- !u!54 &1313329508
 Rigidbody:
@@ -2788,7 +2788,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 0.5, z: 1.1}
+  m_Size: {x: 1.2, y: 0.5, z: 1.2}
   m_Center: {x: 0, y: 0.07, z: 0}
 --- !u!54 &1449075962
 Rigidbody:
@@ -3121,7 +3121,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 0.5, z: 1.1}
+  m_Size: {x: 1.2, y: 0.5, z: 1.2}
   m_Center: {x: 0, y: 0.07, z: 0}
 --- !u!54 &1632956645
 Rigidbody:
@@ -3601,7 +3601,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 0.5, z: 1.1}
+  m_Size: {x: 1.2, y: 0.5, z: 1.2}
   m_Center: {x: 0, y: 0.07, z: 0}
 --- !u!54 &1786926183
 Rigidbody:
@@ -3976,7 +3976,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 0.5, z: 1.1}
+  m_Size: {x: 1.2, y: 0.5, z: 1.2}
   m_Center: {x: 0, y: 0.07, z: 0}
 --- !u!54 &1831597834
 Rigidbody:
@@ -4026,7 +4026,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 0.5, z: 1.1}
+  m_Size: {x: 1.2, y: 0.5, z: 1.2}
   m_Center: {x: 0, y: 0.07, z: 0}
 --- !u!54 &1895936483
 Rigidbody:
