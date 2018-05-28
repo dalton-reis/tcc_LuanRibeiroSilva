@@ -447,7 +447,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: markerSignal2Material
+  m_Name: markerSignal1Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -460,7 +460,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3b49dd4fb5ca4506b84c2457e4d01b68, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4b6d028dbe2b419b8b685bfae19df0c4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -554,7 +554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &190056714
 Transform:
   m_ObjectHideFlags: 0
@@ -651,7 +651,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: markerLetter3Material
+  m_Name: markerLetter4Material
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -664,7 +664,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 05cc816e920a46ac94cc17e58565b2b6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 426addeaa47a457c95968f5f1699d4d0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
@@ -1433,7 +1433,6 @@ GameObject:
   - component: {fileID: 945537867}
   - component: {fileID: 945537866}
   - component: {fileID: 945537865}
-  - component: {fileID: 945537873}
   - component: {fileID: 945537864}
   m_Layer: 0
   m_Name: MarkerLetter2
@@ -1579,17 +1578,6 @@ Transform:
   m_Father: {fileID: 190056714}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &945537873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 945537863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 779dec725b6ed3c439efe413761d9fa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &967680076
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,7 +1959,6 @@ GameObject:
   - component: {fileID: 1033224297}
   - component: {fileID: 1033224296}
   - component: {fileID: 1033224295}
-  - component: {fileID: 1033224303}
   - component: {fileID: 1033224294}
   m_Layer: 0
   m_Name: MarkerLetter4
@@ -2117,17 +2104,6 @@ Transform:
   m_Father: {fileID: 190056714}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1033224303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1033224293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 779dec725b6ed3c439efe413761d9fa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1075517955
 Prefab:
   m_ObjectHideFlags: 0
@@ -2659,7 +2635,6 @@ GameObject:
   - component: {fileID: 1449075954}
   - component: {fileID: 1449075962}
   - component: {fileID: 1449075961}
-  - component: {fileID: 1449075963}
   - component: {fileID: 1449075960}
   m_Layer: 0
   m_Name: MarkerLetter1
@@ -2805,17 +2780,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1449075963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1449075953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 779dec725b6ed3c439efe413761d9fa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1479859277
 GameObject:
   m_ObjectHideFlags: 0
@@ -3089,7 +3053,6 @@ GameObject:
   - component: {fileID: 1632956646}
   - component: {fileID: 1632956645}
   - component: {fileID: 1632956644}
-  - component: {fileID: 1632956652}
   - component: {fileID: 1632956643}
   m_Layer: 0
   m_Name: MarkerLetter3
@@ -3235,17 +3198,6 @@ Transform:
   m_Father: {fileID: 190056714}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1632956652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1632956642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 779dec725b6ed3c439efe413761d9fa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1677805375
 GameObject:
   m_ObjectHideFlags: 0

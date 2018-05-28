@@ -43,7 +43,7 @@ public class DetectTrigger : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
     {
         text.GetComponent<TextMesh>().color = new Color32(0, 212, 1, 255);
     }

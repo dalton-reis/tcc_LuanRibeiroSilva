@@ -166,6 +166,7 @@ public class GameARScript : MonoBehaviour
             int position = positionMarkers[Random.Range(0, positionMarkers.Length)];
             positionMarkers = positionMarkers.ToList().Where(x => x != position).ToArray();
             markersLetters[position].name += signal;
+            markersLetters[position].GetComponentInChildren<TextMesh>().text = signal;
         }
     }
 

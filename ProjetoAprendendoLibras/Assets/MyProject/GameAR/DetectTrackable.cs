@@ -11,6 +11,11 @@ public class DetectTrackable : MonoBehaviour, ITrackableEventHandler
         GetComponent<TrackableBehaviour>().RegisterTrackableEventHandler(this);
     }
 
+    void Update()
+    {
+
+    }
+
     public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus,
                                         TrackableBehaviour.Status newStatus)
     {
@@ -20,18 +25,8 @@ public class DetectTrackable : MonoBehaviour, ITrackableEventHandler
         {
             char lastLetter = gameObject.name[gameObject.name.Length - 1];
 
-            if (gameObject.name.Contains("Signal"))
-            {
-                GetComponentInChildren<Animator>().Rebind();
-                GetComponentInChildren<Animator>().Play("Signal" + lastLetter);
-            }
-            else
-                GetComponentInChildren<TextMesh>().text = lastLetter.ToString();
+            GetComponentInChildren<Animator>().Rebind();
+            GetComponentInChildren<Animator>().Play("Signal" + lastLetter);
         }
-    }
-
-    void Update()
-    {
-
     }
 }
