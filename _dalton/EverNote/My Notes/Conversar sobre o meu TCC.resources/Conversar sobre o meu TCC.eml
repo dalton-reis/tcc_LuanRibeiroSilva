@@ -1,0 +1,125 @@
+Delivered-To: dalton.reis@gmail.com
+Received: by 10.223.136.220 with SMTP id g28csp178699wrg;
+        Thu, 8 Mar 2018 14:48:28 -0800 (PST)
+X-Received: by 10.202.27.1 with SMTP id b1mr18560645oib.110.1520549308123;
+        Thu, 08 Mar 2018 14:48:28 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1520549308; cv=none;
+        d=google.com; s=arc-20160816;
+        b=DXFN/kOQDYXy/yS1qoCchJxG0y2hvNilSos/6bA2Jf72gbsZ9uCfiqGA8l8NTt1zKa
+         yNdcEjDiy6QOfH6l+JdRdQOlC+CEhx0EgkTKxNxmUYTHz7XYe3ikY8d95rofj/h5jvfZ
+         XWgQEfCGhllZaXFW5lDS///8YGNe3EI2Uj4nU6Bs5ft3jgl7Gjba663YCrgKrPd/QDWM
+         cctG2awRqdOPRvuOXAGmkV1Z86CyPdz7KCHqcb9jBJZpVpPC3TjYYm9yojq1coqAoLht
+         fneeldAUDzpDo8vHQOSwcTMt4Oke4yJ+9TfTgHwZxmZNsunPBtosmfAqT8gWaX963cDX
+         /LmQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=cc:to:subject:message-id:date:from:mime-version:dkim-signature
+         :arc-authentication-results;
+        bh=CifbR8NLK6I/o7dKvdVLy2bskigDVJhwHDRiFVYMDS8=;
+        b=HWOUY4UJhhES0x/kJOOGGv27qzCxNgE9MbdGC0aNGT6Mr0vOcXGE0JV4lPdZc3L9bM
+         P7gutjaw39fxpKcUBiWjIjYq5HAVEOrr2AyP4VFB97xPvA4nLXzH7XqaJqe1mMJc5X0E
+         ttUGzASDoFUTjEPXTNK9BZcZQlHSZb8G/FhcX3PDIc4gNZbcLOqCshkq0XdD+s/FoHq6
+         GTdljjok00y8HOhe7xNAemugByWpQ9mda4npcQx3KQQiJ65uBiJPZzSWTcYba/z62NGy
+         l5DWGKGxg5/XUDiaZrfXClvdA8PSvY4A4UbdndgqAeWUt0RjE3mIak037SIVJNPhFiY2
+         geWg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=Y1jafOH2;
+       spf=pass (google.com: domain of luan.ribeiro.sv@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=luan.ribeiro.sv@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <luan.ribeiro.sv@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id s72sor7883308oie.282.2018.03.08.14.48.27
+        for <dalton.reis@gmail.com>
+        (Google Transport Security);
+        Thu, 08 Mar 2018 14:48:28 -0800 (PST)
+Received-SPF: pass (google.com: domain of luan.ribeiro.sv@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20161025 header.b=Y1jafOH2;
+       spf=pass (google.com: domain of luan.ribeiro.sv@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=luan.ribeiro.sv@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:from:date:message-id:subject:to:cc;
+        bh=CifbR8NLK6I/o7dKvdVLy2bskigDVJhwHDRiFVYMDS8=;
+        b=Y1jafOH2canZPAeA3h5BhYZ8rWFpWrXYEUJ2NZigL6YjCw+LCGcVBBxr8m/UCSnb1o
+         6z+EiA4ASTQ+o1hCaR7QluQ8bxoY9Wh4zZX1LY6yJ0DOteL16sAZDOzZytEfeezvKFNV
+         rj8YyLELZbF9oOFX/3AswdZ2X3DPXwPIt0D+gqmpYVzFbfj/+u6V216TmTMKjFj3TKXM
+         KyBDGTGsg5Lkjdq0tcwtxIi1R5qoRPTHkGstivGISBTEkp8gY2GX4hbIP//Fc61HPzKX
+         uzFu/maTiDVrXUvMUIT69huX9D4qn5BOmhwYR4L+CkWVRopJxWjmPp2NdIFvcTuthdMg
+         Lm8g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to:cc;
+        bh=CifbR8NLK6I/o7dKvdVLy2bskigDVJhwHDRiFVYMDS8=;
+        b=Jvc6bCYQrhayIbis5RCkOmqLnEH1BGA16Xpm9Znjnq1+E1XTeVUBjHoBGNPakR+A3z
+         GV4mvqC53bAdVHjY0Lw4YWL4mc/wr07RDLMwcWVsQBlgLhMNSUtqnyLKMgQumSVbx9eb
+         Ae2KxcNnQ623ihOxSE3fUrvlfMSV+NTGOua4mkFMc6DW7AYzfTXxpHpHOyOZsYsWnKmM
+         D50oSIYqt5rlOz0lGGdxzsur+QM/1YelswmsP8MNGYerlwV+YM0o9TtrdEMm53H0d/Ml
+         4IVLPwvFoy4MfMhy36ow6e/CBFm7tnnEd+hv5RE+WQ6r44tgwNn/OBqmEOebFr5cRuko
+         wWmg==
+X-Gm-Message-State: AElRT7Ht8p6KelwoDD1ffEJoaQz3855e/CxCHreH5TTVnh33Mka34Ntx
+	m/uD+W5aasV3BhXPdiBV4j+sy+moAfxlCAtmzPs=
+X-Google-Smtp-Source: AG47ELtEDIWwUyjPMP+4LLwms13kstKKG/bH0w4jCwtVFaS9diYB0C5EC6E6+mp7E92Wi77tYHDZfAgc0raJgSk0FSw=
+X-Received: by 10.202.114.8 with SMTP id p8mr18490213oic.325.1520549307613;
+ Thu, 08 Mar 2018 14:48:27 -0800 (PST)
+MIME-Version: 1.0
+Received: by 10.202.168.1 with HTTP; Thu, 8 Mar 2018 14:48:27 -0800 (PST)
+From: Luan Ribeiro <luan.ribeiro.sv@gmail.com>
+Date: Thu, 8 Mar 2018 19:48:27 -0300
+Message-ID: <CAN39ZYEfxbrUo9m8Zpa-CVFBXbBzdRQ6psVL0ZHq1XMZgz3wwg@mail.gmail.com>
+Subject: Conversar sobre o meu TCC
+To: nanda.ufsc@hotmail.com
+Cc: Dalton Reis <dalton.reis@gmail.com>
+Content-Type: multipart/alternative; boundary="001a1134fbe25804df0566ee799f"
+
+--001a1134fbe25804df0566ee799f
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Boa noite professora Nanda.
+
+Meu nome =C3=A9 Luan, sou aluno de Ci=C3=AAncias da Computa=C3=A7=C3=A3o na=
+ Furb.
+
+No semestre passado, eu e o meu orientador Dalton conversamos rapidamente
+com voc=C3=AA sobre a ideia do meu TCC, que tem o tema "Conceitos b=C3=A1si=
+cos de
+Libras usando Realidade Aumentada". E agora nesse semestre estou iniciando
+a implementa=C3=A7=C3=A3o, com isso gostaria de conversar com voc=C3=AA sob=
+re a ideia e
+mostrar alguns exemplos de como o projeto ser=C3=A1 para termos uma opini=
+=C3=A3o de
+um especialista.
+
+Ent=C3=A3o queria ver se voc=C3=AA tem algum hor=C3=A1rio na parte da noite=
+ na semana que
+vem para podermos conversar, o local pode ser na Furb ou onde ficar mais
+f=C3=A1cil para voc=C3=AA.
+
+Obrigado pela aten=C3=A7=C3=A3o e aguardo o contato.
+
+Att.,
+Luan.
+
+--001a1134fbe25804df0566ee799f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><div class=3D"m_-8432456945806505227gmail_signature" =
+data-smartmail=3D"gmail_signature"><div dir=3D"ltr">Boa noite professora Na=
+nda.</div><div dir=3D"ltr"><br></div><div dir=3D"ltr">Meu nome =C3=A9 Luan,=
+ sou aluno de Ci=C3=AAncias da Computa=C3=A7=C3=A3o na Furb.=C2=A0</div><di=
+v dir=3D"ltr"><br></div><div dir=3D"ltr">No semestre passado, eu e o meu or=
+ientador Dalton conversamos rapidamente com voc=C3=AA sobre a ideia do meu =
+TCC, que tem o tema &quot;Conceitos b=C3=A1sicos de Libras usando Realidade=
+ Aumentada&quot;. E agora nesse semestre estou iniciando a implementa=C3=A7=
+=C3=A3o, com isso gostaria de conversar com voc=C3=AA sobre a ideia e mostr=
+ar alguns exemplos de como o projeto ser=C3=A1 para termos uma opini=C3=A3o=
+ de um especialista.</div><div dir=3D"ltr"><br></div><div dir=3D"ltr">Ent=
+=C3=A3o queria ver se voc=C3=AA tem algum hor=C3=A1rio na parte da noite na=
+ semana que vem para podermos conversar, o local pode ser na Furb ou onde f=
+icar mais f=C3=A1cil para voc=C3=AA.</div><div dir=3D"ltr"><br></div><div d=
+ir=3D"ltr">Obrigado pela aten=C3=A7=C3=A3o e aguardo o contato.<br><div><br=
+></div><div>Att.,</div><div>Luan.</div></div></div></div>
+</div>
+
+--001a1134fbe25804df0566ee799f--
