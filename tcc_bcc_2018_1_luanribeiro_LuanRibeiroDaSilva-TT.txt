@@ -1,0 +1,24 @@
+Ferramentas usadas para o desenvolvimento: 
+    Unity versão 2017.3.0f3
+    Vuforia versão 7.0.36
+    Google VR versão 1.120
+	
+Passos para desenvolvimento:
+	Importar o projeto no Unity
+	Trocar a plataforma para Android ou IOS no "Build Settings"
+	Acessar "Build Settings -> Player Settings", abrir a seção "XR Settings"
+		Ativar a opção "Vuforia Augmented Reality"
+		Ativar a opção "Virtual Reality Supported"
+		Em Virtual Reality SDKs, adicionar as opção "None" e "Cardboard", deixando a opção "None" por primeiro
+	Informar "App License Key" nas configurações do Vuforia na cena GameARScene
+	Executar o projeto
+	
+A pasta "Outros -> Marcadores" contém os seguintes arquivos:
+	AprendendoLibras.unitypackage: Database do Vuforia com os marcadores
+	*.jpg: Imagens dos marcadores
+	*.psd: Arquivos do photoshop dos marcadores
+	
+A pasta "Outros -> Mão 3D" contém os seguintes arquivos:
+	Hand.blend: Projeto no Blender da mão 3D
+	Hand.fbx: Mão 3D exportada do Blender
+	hand_map.jpg: Arquivo map do molde da mão 3D
